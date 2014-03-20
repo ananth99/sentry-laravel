@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'authentication',
 			'username'  => 'root',
-			'password'  => 'toor',
+			'password'  => 'yourpassword',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
