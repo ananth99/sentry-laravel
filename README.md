@@ -11,7 +11,7 @@ This is a simple implementation of [Sentry2](https://cartalyst.com/manual/sentry
 
 #### To include this in your app: 
 1. Configure your mail.php and database.php.
-2. Modify routes to suit your requirement. 
+2. Modify routes to suit your requirement after login or authentication. Default routes redirect to homepage with a flash status message in the homepage itself.
 3. Implementation uses Twitter Bootstrap by default and comes up with a UI. Change it as per your requirement.
 
 *Note: The default Auth Provider in Laravel and Sentry are independent. Auth will not work while using Sentry.*
