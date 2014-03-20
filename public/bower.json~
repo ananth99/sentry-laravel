@@ -1,0 +1,27 @@
+{
+  "name": "Laravel-Auth",
+  "version": "1.0",
+  "homepage": "ananth99.github.io",
+  "authors": [
+    "Ananth Madhavan"
+  ],
+  "description": "Laravel auth",
+  "keywords": [
+    "Auth",
+    "Laravel"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.3",
+    "jquery-ui": "~1.10.3"
+  }
+}
