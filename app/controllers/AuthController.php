@@ -161,10 +161,10 @@ class AuthController extends BaseController {
 			);
 			 
 			// use Mail::send function to send email passing the data and using the $user variable in the closure
-			Mail::send('passwordReset', $data, function($message) use ($user)
+			Mail::send('passwordReset', $data, function($message) use ($user, $data)
 			{
 			  $message->from('admin@org.com', 'Organisation');
-			  $message->to('ananthmadhavan6@gmail.com', $user['name'])->subject('Password Reset');
+			  $message->to($data['email'], $data['name'])->subject('Password Reset');
 			});
 
 		return Redirect::to('/')->with('message','Reset password code has been sent to your inbox!');
