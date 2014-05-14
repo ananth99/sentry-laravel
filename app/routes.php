@@ -16,10 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::post('auth/login','AuthController@postLogin');
-Route::post('auth/register','AuthController@postRegister');
-Route::get('auth/activate','AuthController@getActivate');
-Route::get('auth','AuthController@index');
+
 Route::get('logout','AuthController@getLogout');
 Route::get('login',function(){
 	return View::make('hello');
@@ -29,7 +26,15 @@ Route::get('forgotPassword',function(){
 	return View::make('forgotPassword');
 });
 
-Route::post('auth/forgotPassword','AuthController@postForgotPassword');
-Route::get('auth/resetPassword','AuthController@getResetPassword');
-Route::post('auth/resetPassword','AuthController@postResetPassword');
+Route::get('auth','AuthController@index');    
 
+Route::group(array('prefix' => 'auth'), function() {
+ 
+	Route::post('/forgotPassword','AuthController@postForgotPassword');
+	Route::get('/resetPassword','AuthController@getResetPassword');
+	Route::post('/resetPassword','AuthController@postResetPassword');
+        Route::post('/login','AuthController@postLogin');
+	Route::post('/register','AuthController@postRegister');
+	Route::get('/activate','AuthController@getActivate');
+
+        });
